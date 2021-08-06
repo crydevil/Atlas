@@ -1,0 +1,39 @@
+<RoundedButton>:
+    text: 'assistant'
+    font_size: 20
+    bold: True
+    color: (0,1,0,1)
+    outline_color: (0,0,0,1)
+    outline_width: 2
+    background_color: (0,0,0,0)
+
+    Image:
+        source: 'images/sphere_button.png'
+        center_x: self.parent.center_x
+        center_y: self.parent.center_y
+
+<InformationButton>:
+    background_color: (0,0,0,0)
+
+    Image:
+        source: 'images/information_button.png'
+        center_x: self.parent.center_x
+        center_y: self.parent.center_y
+
+<ImageBackground>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'images/background.jpg'
+
+<Information>
+    font_size: 20
+    bold: True
+    color: (0,.43,.93,1)
+    outline_color: (0,0,0,1)
+    outline_width: 2
+    text_size: self.size
+    halign: 'center'
+    valign: 'middle'
+    text: 'Version: 1.0\n Software agent name: Atlas \n Developer: Susiekov Yakiv'
